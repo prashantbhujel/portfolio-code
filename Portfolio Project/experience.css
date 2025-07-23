@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0e0e0e;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 100px;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 5%;
+  background-color: #0e0e0e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: #b74b4b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #b74b4b;
+  border-bottom: 2px solid #b74b4b;
+}
+
+.experience-section {
+  padding: 4rem 5%;
+  min-height: 100vh;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.section-title span {
+  color: #c25c5c;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  border-left: 2px solid #c25c5c;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.exp-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  position: relative;
+  animation: fadeIn 1.2s ease forwards;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.exp-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(0);
+}
+
+.exp-icon {
+  position: absolute;
+  top: 20px;
+  left: -50px;
+  background: #c25c5c;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 0 0 10px #c25c5c88;
+}
+
+.exp-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.year {
+  font-size: 0.9rem;
+  color: #bbb;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.exp-content p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .exp-card {
+    padding: 1rem 1.5rem;
+  }
+
+  .exp-icon {
+    left: -35px;
+  }
+
+  .exp-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .exp-content p {
+    font-size: 0.95rem;
+  }
+}
